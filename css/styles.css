@@ -1,0 +1,226 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #222;
+    line-height: 1.6;
+}
+
+section {
+    padding: 60px 10%;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+
+/* Navigation */
+
+header {
+    background-color: #222;
+    color: white;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Buttons */
+
+button,
+.button {
+    background-color: #333;
+    color: white;
+
+    border: none;
+    padding: 10px 18px;
+
+    border-radius: 5px;
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+button:hover,
+.button:hover {
+    opacity: 0.8;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: #f2f2f2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+
+/* Skills */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-container span {
+    background-color: #eeeeee;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+/* Projects */
+
+.projects-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+/* Contact Form */
+
+form {
+    max-width: 600px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+input,
+textarea {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 1rem;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* Dark Mode */
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .hero {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .project-card {
+    border-color: #555;
+}
+
+.dark-mode .skills-container span {
+    background-color: #333;
+}
+
+
+/* Tablet and Mobile */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+}
