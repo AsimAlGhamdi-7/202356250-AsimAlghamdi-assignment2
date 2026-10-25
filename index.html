@@ -76,10 +76,32 @@
         <!-- Projects -->
         <section id="projects">
             <h2>Projects</h2>
+            <div class="project-tools">
+                <label for="projectSearch" class="sr-only">
+                    Search projects
+                </label>
+
+                <input
+                    type="text"
+                    id="projectSearch"
+                    placeholder="Search projects..."
+                    aria-label="Search projects"
+                >
+            
+                <select id="projectFilter"
+                        aria-label="Filter projects by category">
+                    <option value="all">All Categories</option>
+                    <option value="web">Web Development</option>
+                    <option value="software">Software Engineering</option>
+                </select>
+            
+            </div>
 
             <div class="projects-container">
 
-                <article class="project-card">
+                <article class="project-card"
+                         data-category="software"
+                         data-title="peerlearn">
                     <img src="https://placehold.co/400x250"
                          alt="PeerLearn project placeholder">
 
@@ -93,7 +115,9 @@
                 </article>
 
 
-                <article class="project-card">
+                <article class="project-card"
+                         data-category="web"
+                         data-title="student learning community">
                     <img src="https://placehold.co/400x250"
                          alt="Student Community project placeholder">
 
@@ -107,6 +131,10 @@
                 </article>
 
             </div>
+            <p id="noProjectsMessage" class="hidden">
+                No projects found.
+            </p>
+
         </section>
 
 
@@ -114,7 +142,7 @@
         <section id="contact">
             <h2>Contact Me</h2>
 
-            <form id="contactForm">
+            <form id="contactForm" novalidate>
 
                 <label for="name">Name</label>
                 <input
@@ -122,6 +150,7 @@
                     id="name"
                     required
                 >
+                <small id="nameError" class="field-error"></small>
 
                 <label for="email">Email</label>
                 <input
@@ -129,6 +158,7 @@
                     id="email"
                     required
                 >
+                <small id="emailError" class="field-error"></small>
 
                 <label for="message">Message</label>
                 <textarea
@@ -136,8 +166,10 @@
                     rows="5"
                     required
                 ></textarea>
+                <small id="messageError" class="field-error"></small>
 
                 <button type="submit">Send Message</button>
+                <p id="formFeedback" class="form-feedback"></p>
 
             </form>
 
